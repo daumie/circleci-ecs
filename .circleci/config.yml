@@ -18,7 +18,7 @@ workflows:
           # myDockerfile
           dockerfile: Dockerfile
           # pathToMyDockerfile
-          path: ../
+          path:
           # myProfileName
           profile-name: staging
           # AWS_REGION_ENV_VAR_NAME
