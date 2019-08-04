@@ -25,7 +25,7 @@ workflows:
           tag: "$CIRCLE_SHA1"
       - aws-ecs/deploy-service-update:
           requires:
-            - aws-ecr/uild-and-push-image
+            - aws-ecr/build-and-push-image
           aws-region: ${AWS_DEFAULT_REGION}
           family: circleci-ecs-demo
           cluster-name: circleci-demo-cluster
