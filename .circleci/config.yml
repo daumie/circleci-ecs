@@ -5,17 +5,25 @@ orbs:
   aws-ecs: circleci/aws-ecs@0.0.11
 
 workflows:
+# Log into AWS, build and push image to Amazon ECR
   build_and_push_image:
     jobs:
       - aws-ecr/build-and-push-image:
-          account-url: AWS_ECR_ACCOUNT_URL_ENV_VAR_NAME
-          aws-access-key-id: ACCESS_KEY_ID_ENV_VAR_NAME
-          aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME
-          context: myContext
+          account-url: AWS_ECR_ACCOUNT_URL
+          aws-access-key-id: ACCESS_KEY_ID
+          aws-secret-access-key: SECRET_ACCESS_KEY
+          # myContext
+          context: .
           create-repo: true
-          dockerfile: myDockerfile
-          path: pathToMyDockerfile
-          profile-name: myProfileName
-          region: AWS_REGION_ENV_VAR_NAME
-          repo: myECRRepository
-          tag: myECRRepoTag
+          # myDockerfile
+          dockerfile: Dockerfile
+          # pathToMyDockerfile
+          path: .
+          # myProfileName
+          profile-name: staging
+          # AWS_REGION_ENV_VAR_NAME
+          region: AWS_REGION
+          # myECRRepository
+          repo: circleci-ecs
+          # myECRRepoTag
+          tag: latest
