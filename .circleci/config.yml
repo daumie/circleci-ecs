@@ -20,7 +20,7 @@ workflows:
           # AWS_REGION_ENV_VAR_NAME
           region: AWS_REGION
           # myECRRepository
-          repo: AWS_REPO
+          repo: circleci-ecs
           # myECRRepoTag
           tag: latest
 
