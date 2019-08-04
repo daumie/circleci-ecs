@@ -22,6 +22,6 @@ workflows:
           # myECRRepository
           repo: AWS_REPO
           # myECRRepoTag
-          tag: CIRCLE_SHA1
+          tag: latest
 
 
