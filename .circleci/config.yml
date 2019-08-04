@@ -9,21 +9,19 @@ workflows:
   build_and_push_image:
     jobs:
       - aws-ecr/build-and-push-image:
-          account-url: AWS_ECR_ACCOUNT_URL
-          aws-access-key-id: ACCESS_KEY_ID
-          aws-secret-access-key: SECRET_ACCESS_KEY
-          # myContext
-          context:
+          account-url: "${AWS_ECR_ACCOUNT_URL}"
+          aws-access-key-id: "${AWS_ACCESS_KEY_ID}"
+          aws-secret-access-key: "${AWS_SECRET_ACCESS_KEY}"
           create-repo: true
-          # myDockerfile
+          # Name of dockerfile to use. Defaults to Dockerfile.
           dockerfile: Dockerfile
-          # pathToMyDockerfile
-          path:
-          # myProfileName
+          # AWS profile name to be configured.
           profile-name: staging
           # AWS_REGION_ENV_VAR_NAME
-          region: AWS_REGION
+          region: "${AWS_REGION}"
           # myECRRepository
-          repo: circleci-ecs
+          repo: "${AWS_REPO}"
           # myECRRepoTag
-          tag: latest
+          tag: "${CIRCLE_SHA1}"
+
+
