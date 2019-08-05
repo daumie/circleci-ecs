@@ -1,9 +1,9 @@
 {
-    "family": "circle-demo-service",
+    "family": "circleci-demo-service",
     "containerDefinitions": [
         {
-            "name": "circle-demo-web",
-            "image": "634223907656.dkr.ecr.eu-west-2.amazonaws.com/circlec-demo:v1",
+            "name": "circleci-demo-service",
+            "image": "634223907656.dkr.ecr.eu-west-2.amazonaws.com/circleci-demo:latest",
             "cpu": 128,
             "memoryReservation": 128,
             "portMappings": [
