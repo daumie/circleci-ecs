@@ -1,7 +1,7 @@
 {
     "cluster": "circleci-demo-cluster",
     "serviceName": "circle-demo-service",
-    "taskDefinition": "circleci-ecs-demo",
+    "taskDefinition": "circle-demo-service",
     "loadBalancers": [
         {
             "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-2:634223907656:targetgroup/circleci-demo-target-group/ff81cdfe3254f63f",
