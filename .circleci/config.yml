@@ -15,8 +15,6 @@ workflows:
           create-repo: true
           # Name of dockerfile to use. Defaults to Dockerfile.
           dockerfile: Dockerfile
-          # AWS profile name to be configured.
-          profile-name: staging
           # AWS_REGION_ENV_VAR_NAME
           region: AWS_DEFAULT_REGION
           # myECRRepository
@@ -27,6 +25,6 @@ workflows:
           requires:
             - aws-ecr/build-and-push-image
           aws-region: AWS_DEFAULT_REGION
-          family: ${MY_APP_PREFIX}-service
-          cluster-name: ${MY_APP_PREFIX}-cluster
-          container-image-name-updates: "container=${MY_APP_PREFIX}-service,tag=${CIRCLE_SHA1}"
+          family: '${MY_APP_PREFIX}-service'
+          cluster-name: '${MY_APP_PREFIX}-cluster'
+          container-image-name-updates: "container='${MY_APP_PREFIX}-service',tag=${CIRCLE_SHA1}"
