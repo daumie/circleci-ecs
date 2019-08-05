@@ -14,3 +14,5 @@ For the Networking VPC settings, I used the default VPC and all the Subnets asso
 Wait a few minutes and the confirm that the Container Instance has successfully registered to the `circleci-demo-cluster` ECS cluster. You can confirm it by clicking on the ECS Instances tab under Clusters / `circleci-demo-cluster`.
 
 2. Create a task definition that will be blueprint to start a Go Application
+
+
