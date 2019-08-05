@@ -18,7 +18,7 @@ workflows:
           # AWS_REGION_ENV_VAR_NAME
           region: AWS_DEFAULT_REGION
           # myECRRepository
-          repo: MY_APP_PREFIX
+          repo: '${MY_APP_PREFIX}'
           # myECRRepoTag
           tag: "$CIRCLE_SHA1"
       - aws-ecs/deploy-service-update:
