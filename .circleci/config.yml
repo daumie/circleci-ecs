@@ -20,13 +20,13 @@ workflows:
           # AWS_REGION_ENV_VAR_NAME
           region: AWS_DEFAULT_REGION
           # myECRRepository
-          repo: circleci-ecs
+          repo: MY_APP_PREFIX
           # myECRRepoTag
           tag: "$CIRCLE_SHA1"
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
           aws-region: AWS_DEFAULT_REGION
-          family: circleci-ecs-demo
-          cluster-name: circleci-demo-cluster
-          container-image-name-updates: "container=circle-demo-web,tag=${CIRCLE_SHA1}"
+          family: ${MY_APP_PREFIX}-service
+          cluster-name: ${MY_APP_PREFIX}-cluster
+          container-image-name-updates: "container=${MY_APP_PREFIX}-service,tag=${CIRCLE_SHA1}"
