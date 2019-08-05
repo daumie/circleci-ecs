@@ -29,4 +29,4 @@ workflows:
           aws-region: AWS_DEFAULT_REGION
           family: circleci-ecs-demo
           cluster-name: circleci-demo-cluster
-          container-image-name-updates: "container=ccircle-demo-service,tag=${CIRCLE_SHA1}"
+          container-image-name-updates: "container=circle-demo-service,tag=${CIRCLE_SHA1}"
