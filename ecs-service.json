@@ -4,7 +4,7 @@
     "taskDefinition": "circleci-demo-service",
     "loadBalancers": [
         {
-            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-2:634223907656:targetgroup/circleci-target-group/8ba7450d0f5447b1",
+            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-2:634223907656:targetgroup/circleci-demo-target-group/a5a0f047c845fcbb",
             "containerName": "circleci-demo-service",
             "containerPort": 8080
         }

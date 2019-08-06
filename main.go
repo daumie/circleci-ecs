@@ -36,7 +36,7 @@ func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
 }
 
 func helloWorld(w http.ResponseWriter, r *http.Request) {
-	html := "Hello World, It's your boy Dominic. How can I help you today"
+	html := "Hello World! Now updated with CircleCI"
 	if r.URL.Path != "/" {
 		errorHandler(w, r, http.StatusNotFound)
 		return
